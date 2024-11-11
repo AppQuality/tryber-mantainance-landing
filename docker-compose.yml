@@ -6,5 +6,3 @@ services:
       - "${PORT:-80}:80"
     env_file:
       - .env
-    volumes:
-      - ./favicon.ico:/usr/share/nginx/html/images/icons/favicon.ico
