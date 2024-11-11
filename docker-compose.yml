@@ -4,9 +4,7 @@ services:
     build: .
     ports:
       - "${PORT:-80}:80"
-    environment:
-      - PORT=80
-      - SITE_NAME=Tryber
-      - GRADIENT_BACKGROUND=-45deg,#F7E80E,#7100D2,#7100D1
+    env_file:
+      - .env
     volumes:
       - ./favicon.ico:/usr/share/nginx/html/images/icons/favicon.ico
